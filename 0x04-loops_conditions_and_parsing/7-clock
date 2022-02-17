@@ -10,7 +10,7 @@ do
 	then
 		while [ "$j" -le 59 ]
 		do
-			echo "$j"
+			echo $j
 			((j++))
 		done
 	fi
