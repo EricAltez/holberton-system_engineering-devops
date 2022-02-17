@@ -6,13 +6,10 @@ while [ "$i" -le 12 ]
 do
 	j=1
 	echo Hour: $i
-	if [ "$i" -lt 12 ]
-	then
-		while [ "$j" -le 59 ]
-		do
-			echo $j
-			((j++))
-		done
-	fi
+	while [ "$j" -le 59 ]
+	do
+		echo $j
+		((j++))
+	done
 	((i++))
 done
