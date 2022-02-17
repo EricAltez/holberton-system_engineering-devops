@@ -4,10 +4,10 @@ i=0
 j=1
 while [ "$i" -le 12 ]
 do
-	j=1
 	echo "Hour: $i"
 	if [ "$i" -lt 12 ]
 	then
+		j=1
 		while [ "$j" -le 60 ]
 		do
 			echo "$j"
