@@ -7,7 +7,10 @@ The firewall filters the content that enters and leaves our networks through cer
 There are many types of firewalls and the choice of which to use depends on the needs of the network.
 
 ## SSL Certificate (Secure Socket Layer): 
-It is a global security standard that allows a connection to be kept secure, authenticates the identity of the servers and encrypts the information exchanged using a system of keys, one public and one private, without which it is almost impossible to decrypt the information in case of being intercepted
+It is a global security standard that allows a connection to be kept secure, authenticates the identity of the servers and encrypts the information exchanged using a system of keys, one public and one private, without which it is almost impossible to decrypt the information in case of being intercepted.
+
+## Why is the traffic served over HTTPS?
+The traffic is served through the https protocol because it protects the information exchanged using the SSL certificate.
 
 ## Monitoring:
 With this application we monitor servers taking data from it and send it to the application servers (Ex. NewRelic) and there reports on vulnerabilities and security violations are generated, then It will give you a detailed analysis about your server and application.
