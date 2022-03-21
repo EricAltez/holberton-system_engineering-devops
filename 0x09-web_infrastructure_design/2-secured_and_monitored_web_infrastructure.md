@@ -12,6 +12,9 @@ It is a global security standard that allows a connection to be kept secure, aut
 ## Monitoring:
 With this application we monitor servers taking data from it and send it to the application servers (Ex. NewRelic) and there reports on vulnerabilities and security violations are generated, then It will give you a detailed analysis about your server and application.
 
+## What monitoring is used for?
+As the phrase says: You cannot fix or improve what you cannot measure, monitoring is used to collect information that will later allow us to optimize operation and correct or even prevent errors.
+
 ## What to do if you want to monitor your web server QPS?
 You can install a Monitor client on your server to monitor your QPS
 
