@@ -2,7 +2,7 @@
 # Installing and starting nginx
 sudo apt update
 sudo apt install -y nginx
-sudo service nginx restart
 
 # Changing html response
 echo "Hello World" | tee /var/www/html/index.nginx-debian.html
+sudo service nginx restart
