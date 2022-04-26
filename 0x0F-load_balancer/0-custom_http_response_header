@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
-# Installing and starting nginx and configuring redirection
+# configure web-02 to be identical to web-01
+# add a custom Nginx response header
 sudo apt update
-sudo apt install -y nginx
+sudo apt -y install nginx
 echo "Hello World" > /var/www/html/index.nginx-debian.html
-sudo sed -i '/^\tserver_name.*/a \\trewrite ^\/redirect_me/$ https:\/\/www.youtube.com\/watch?v=QH2-TGUlwu4 permanent;\nerror_page 404 /404.html;' /etc/nginx/sites-available/default
-sed "/^\http {/a \\n\\tX-Served-By $HOSTNAME;" /etc/nginx/nginx.conf
-echo "Ceci n'est pas une page" | sudo tee /var/www/html/404.html
+echo "Ceci n'est pas une page" > /var/www/html/404.html
+sudo sed -i '/^\tserver_name.*/a \\n\terror_page 404 \/custom-404.html;\n\tadd_header X-Served-By $HOSTNAME;\n\trewrite ^\/redirect_me/$ https:\/\/www.youtube.com\/watch?v=QH2-TGUlwu4 permanent;\n' /etc/nginx/sites-available/default
 sudo service nginx restart
