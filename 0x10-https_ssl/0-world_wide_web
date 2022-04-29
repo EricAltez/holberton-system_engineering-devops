@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Script that makes loader inform about subdomains
+if [ $# -eq 1 ]
+then
+    doms="www.$1 lb-01.$1 web-01.$1 web-02.$1"
+else
+    doms="$2.$1"
+fi
+dig $doms | awk '/ANSWER SECTION:/ { getline; split($1, a, "."); print "The subdomain", a[1], "is a", $4 " record and points to", $5}'
