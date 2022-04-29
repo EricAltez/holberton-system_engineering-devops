@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Bash script fix Nginx installation not listening on port 80
+cp /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+service nginx restart
