@@ -28,6 +28,6 @@ if __name__ == "__main__":
             comp_task_list.append(task.get('title'))
 
     print("Employee {} is done with tasks({}/{}):"
-            .format(r_user.get('name'), task_completed, task_total))
+          .format(r_user.get('name'), task_completed, task_total))
     for i in comp_task_list:
         print("\t {}".format(i))
